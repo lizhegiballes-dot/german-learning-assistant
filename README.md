@@ -3,7 +3,9 @@
 
 **Select a word. Keep your flow.**
 
-Turn everyday German reading into a wordbook that grows with you. Quick selection lookup, daily collections, simple review and one-click exports — right in your browser.
+I got tired of interrupting my reading to look up German words on Duden—waiting for pages to load and dealing with ads. So I built **German Learning Assistant**, a free, open-source Chrome extension for looking up words, saving vocabulary, reviewing and exporting word lists for Anki. It supports English and Chinese, and keeps your learning records on your own device.
+
+我受够了在杜登查词时碰到的广告、缓慢加载和来回切换页面，于是做了 **German Learning Assistant**，一款免费开源的 Chrome 德语学习助手。划词查询、收藏生词、分类整理、复习，再一键导出 Anki 词单；支持中英文，学习记录保存在自己的设备上。
 
 [**Download for Chrome →**](https://github.com/lizhegiballes-dot/german-learning-assistant/releases/latest) · [中文说明](README.zh-CN.md) · [Getting started](#get-started)
 
