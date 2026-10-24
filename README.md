@@ -1,13 +1,13 @@
-# WortGlide
-### Your German Reading Companion
+# German Learning Assistant
+### Word Lookup, Wordbooks, Review & One-Click Export
 
 **Select a word. Keep your flow.**
 
 Turn everyday German reading into a wordbook that grows with you. Quick selection lookup, daily collections, simple review and one-click exports — right in your browser.
 
-[**Download for Chrome →**](https://github.com/lizhegiballes-dot/wortglide/releases/latest) · [中文说明](README.zh-CN.md) · [Getting started](#get-started)
+[**Download for Chrome →**](https://github.com/lizhegiballes-dot/german-learning-assistant/releases/latest) · [中文说明](README.zh-CN.md) · [Getting started](#get-started)
 
-![WortGlide — German words, collected your way](docs/wordbook.png)
+![German vocabulary wordbook](docs/wordbook.png)
 
 ## Less friction. More German.
 
@@ -21,10 +21,10 @@ English-first, with a Chinese interface option and separate English / Chinese de
 
 ## Get started
 
-1. [Download the latest extension ZIP](https://github.com/lizhegiballes-dot/wortglide/releases/latest) and extract it to a folder you will keep.
+1. [Download the latest extension ZIP](https://github.com/lizhegiballes-dot/german-learning-assistant/releases/latest) and extract it to a folder you will keep.
 2. Open Chrome's extensions page, enable **Developer mode**, then choose **Load unpacked**.
 3. Select the folder that directly contains **manifest.json**. In a source checkout, select **extension**.
-4. Open WortGlide from your toolbar, set your preferences and refresh your reading tabs.
+4. Open the extension from your toolbar, set your preferences and refresh your reading tabs.
 
 Choose a default collection before starting a book. New lookups will land there automatically; you can always organize them later. Use Review for a small daily practice session, or export your words to continue in Anki.
 

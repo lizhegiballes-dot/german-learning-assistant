@@ -1,10 +1,10 @@
-# WortGlide — Your German Reading Companion（德语学习助手）
+# German Learning Assistant（德语学习助手）
 
 **Select a word. Keep your flow.**
 
 阅读时选词查询，按天保留查词记录，按书本或课程分类收藏，再一键导出到自己的复习流程。默认英文界面，也可切换中文。
 
-[English](README.md) · [下载](https://github.com/lizhegiballes-dot/wortglide/releases) · [隐私](PRIVACY.md) · [词库许可](THIRD_PARTY_NOTICES.md)
+[English](README.md) · [下载](https://github.com/lizhegiballes-dot/german-learning-assistant/releases) · [隐私](PRIVACY.md) · [词库许可](THIRD_PARTY_NOTICES.md)
 
 ![生词本界面](docs/wordbook.png)
 
@@ -13,7 +13,7 @@
 1. 从 Releases 下载扩展 ZIP，解压到长期保留的文件夹。
 2. 打开 Chrome 扩展管理页，开启「开发者模式」，点「加载已解压的扩展程序」。
 3. 选择直接包含 **manifest.json** 的那一层。如果下载的是源码，选择 **extension** 文件夹。
-4. 从浏览器工具栏打开 WortGlide，在设置中选择界面语言、释义语言，按需开启联网。安装或更新后刷新阅读页面。
+4. 从浏览器工具栏打开扩展，在设置中选择界面语言、释义语言，按需开启联网。安装或更新后刷新阅读页面。
 
 不需要桌面后台、Python、账号或付费接口。目前通过 GitHub 手动安装，尚未上架商店。解压文件夹需要保留；移动文件夹可能改变扩展编号，让浏览器分配新的存储空间，因此请先导出备份。
 
@@ -42,4 +42,4 @@
 
 ## 开发与反馈
 
-开发说明、自动检查和数据重建命令见 [英文说明](README.md#development)。这是独立的公开版本，不会连接或修改原作者的私人学习工作台。欢迎提交可复现的问题和带来源的词义修正；请不要把完整学习备份上传到公开 issue。
+开发说明、自动检查和数据重建命令见 [英文说明](README.md#build-with-us)。这是独立的公开版本，不会连接或修改原作者的私人学习工作台。欢迎提交可复现的问题和带来源的词义修正；请不要把完整学习备份上传到公开 issue。
