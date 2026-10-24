@@ -1,52 +1,114 @@
+<div align="center">
+
 # German Learning Assistant
-### Word Lookup, Wordbooks, Review & One-Click Export
 
-**Select a word. Keep your flow.**
+**Look up German words without leaving your reading.**
 
-I got tired of interrupting my reading to look up German words on Duden—waiting for pages to load and dealing with ads. So I built **German Learning Assistant**, a free, open-source Chrome extension for looking up words, saving vocabulary, reviewing and exporting word lists for Anki. It supports English and Chinese, and keeps your learning records on your own device.
+A free, open-source Chrome companion for word lookup, personal wordbooks and Anki exports.
 
-我受够了在杜登查词时碰到的广告、缓慢加载和来回切换页面，于是做了 **German Learning Assistant**，一款免费开源的 Chrome 德语学习助手。划词查询、收藏生词、分类整理、复习，再一键导出 Anki 词单；支持中英文，学习记录保存在自己的设备上。
+[**Download Chrome ZIP · v0.1.0**](https://github.com/lizhegiballes-dot/german-learning-assistant/releases/download/v0.1.0/wortglide-0.1.0.zip) · [Installation guide](docs/GETTING_STARTED.md) · [简体中文](README.zh-CN.md)
 
-[**Download for Chrome →**](https://github.com/lizhegiballes-dot/german-learning-assistant/releases/latest) · [中文说明](README.zh-CN.md) · [Getting started](#get-started)
+[![Checks](https://github.com/lizhegiballes-dot/german-learning-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/lizhegiballes-dot/german-learning-assistant/actions/workflows/ci.yml)
+[MIT code](LICENSE) · Learning records on your device · English / 中文
 
-![German vocabulary wordbook](docs/wordbook.png)
+</div>
 
-## Less friction. More German.
+I got tired of interrupting my reading to look up German words on Duden, waiting for pages to load and dealing with ads. So I built German Learning Assistant to look up words, keep them organized and return to them later.
 
-| While you read | Make it yours |
+<p align="center">
+  <a href="docs/lookup.png"><img src="docs/lookup.png" width="900" alt="A German word lookup with an English meaning, source attribution, collection choice and save controls"></a>
+</p>
+
+## From reading to review
+
+| What you do | What the extension keeps |
 | --- | --- |
-| **Look up in place** — select a word or use the right-click menu. | **Build collections** — one for a book, a course or a new interest. |
-| **Keep your reading flow** — definitions and local German pronunciation beside the word. | **Find it by day** — today's words, in the order you met them. |
-| **Know what keeps coming back** — one word record, with a lookup count. | **Take it anywhere** — one-click CSV and Anki exports, plus portable JSON backups. |
+| Select a word on a supported webpage, or use the right-click menu | A definition beside your reading, with its source |
+| Look up the same headword again | One word record with a lookup count |
+| Read a book or follow a course | A collection you choose for new lookups |
+| Return to today's vocabulary | Daily history in the order you first met each word |
+| Save something worth learning | Personal notes and optional, simple spaced review |
+| Continue in Anki or another tool | Anki TSV, CSV word lists and JSON backups |
 
-English-first, with a Chinese interface option and separate English / Chinese definition preferences. Your notes, collections and review progress stay on your device. No account or desktop service needed.
+Interface language and definition language can be chosen separately. Local dictionary matches appear without loading a separate dictionary webpage. Optional English lookup uses Wiktionary when local definitions are missing.
 
 ## Get started
 
-1. [Download the latest extension ZIP](https://github.com/lizhegiballes-dot/german-learning-assistant/releases/latest) and extract it to a folder you will keep.
-2. Open Chrome's extensions page, enable **Developer mode**, then choose **Load unpacked**.
-3. Select the folder that directly contains **manifest.json**. In a source checkout, select **extension**.
-4. Open the extension from your toolbar, set your preferences and refresh your reading tabs.
+**Chrome 116+ · Manual installation from GitHub.** This project is not currently listed in the Chrome Web Store.
 
-Choose a default collection before starting a book. New lookups will land there automatically; you can always organize them later. Use Review for a small daily practice session, or export your words to continue in Anki.
+1. [Download the extension ZIP](https://github.com/lizhegiballes-dot/german-learning-assistant/releases/download/v0.1.0/wortglide-0.1.0.zip) and extract it to a folder you will keep.
+2. Open `chrome://extensions/`, enable **Developer mode**, then select **Load unpacked**.
+3. Choose the folder that directly contains **manifest.json**. If you downloaded the source instead, choose **extension**.
+4. Open the extension from the toolbar. Choose your languages and refresh your reading tabs.
 
-## Local by default, flexible when you need it
+For broader English coverage, open **Settings → Allow online English definitions**. This option is off by default. German pronunciation requires an installed local German system voice.
 
-Learning records are stored in this extension's database in your current Chrome profile. **Backup JSON** creates a file you control, ready for your own backup drive. Back up before uninstalling or moving an unpacked extension. [Privacy details](PRIVACY.md).
+The v0.1.0 interface and ZIP filenames still use the earlier name **WortGlide**. They belong to this project. A separate desktop service is not needed.
 
-The included dictionaries combine GEMET terminology and clearly labeled HanDeDict Chinese reference matches. Optional online English definitions come from English Wiktionary. Coverage varies, and a missing Chinese meaning is shown honestly with an English fallback when available. German pronunciation needs an installed local system voice. [Dictionary sources and coverage](docs/DATA.md).
+[First lookup, collections, Anki import and troubleshooting →](docs/GETTING_STARTED.md)
+
+## Screenshots
+
+<details>
+<summary><strong>Wordbook, settings and a source-code excerpt</strong></summary>
+
+### Wordbook and daily history
+
+![Wordbook with daily filters, a reading collection and export controls](docs/wordbook.png)
+
+### Language preferences and backups
+
+![Settings with language choices, optional online lookup and JSON backup controls](docs/settings.png)
+
+### A look at the code
+
+The excerpt below comes from [the published lookup handler](extension/background.js#L9). Only whitespace was reformatted for display.
+
+![Local lookup and learning-history source excerpt](docs/source-snapshot.png)
+
+</details>
+
+Screenshots use demo records. They show the v0.1.0 interface.
+
+## Dictionary coverage
+
+| Source | What it provides |
+| --- | --- |
+| **GEMET** | German concepts with English and/or Chinese terminology labels, mainly in environmental and related specialist fields |
+| **HanDeDict** | German-to-Chinese reverse exact-match references, labeled as reference content |
+| **English Wiktionary** | Optional online English definitions from German entries |
+
+Coverage varies. The bundled data is not a complete general German dictionary. Inflection recognition and sense coverage are limited; a missing Chinese meaning can fall back to an existing English definition. Duden and Langenscheidt entries or recordings are not bundled.
+
+[Source details, counts and licenses](docs/DATA.md) · [Attributions](THIRD_PARTY_NOTICES.md)
+
+## Your words stay on your device
+
+Wordbooks, notes and review progress live in this extension's browser database, in your current Chrome profile. **Settings → Backup JSON** creates a portable file you can keep on your own drive. Export a backup before uninstalling, moving the extension folder or changing profiles.
+
+CSV and Anki TSV are word lists. JSON is the format for restoring learning records. Optional online lookup sends the selected word to English Wiktionary; reading-page addresses and your wordbook are not included.
+
+[Privacy](PRIVACY.md) · [Backup and update instructions](docs/GETTING_STARTED.md#backup-and-update)
+
+## Make it yours
+
+Application code is MIT-licensed. You can change the interface, lookup behavior and export code; dictionary data retains its own licenses. Customization currently means editing source files.
+
+- [Planned improvements](docs/ROADMAP.md)
+- [Report a bug](https://github.com/lizhegiballes-dot/german-learning-assistant/issues/new) or [suggest an improvement](https://github.com/lizhegiballes-dot/german-learning-assistant/issues)
+- [Contributing](CONTRIBUTING.md) · [Architecture](docs/ARCHITECTURE.md) · [Security](SECURITY.md)
 
 ## Build with us
 
-Vanilla JavaScript, no application build step. Chrome 116+.
+Vanilla JavaScript. The extension itself has no application build step.
 
-    npm install
-    npm test
-    npx playwright install chromium
-    npm run test:browser
-    npm run test:extension
-    python scripts/package.py
+```sh
+npm ci
+npm test
+npx playwright install chromium
+npm run test:browser
+npm run test:extension
+python scripts/package.py
+```
 
-Browser checks use synthetic records and isolated storage. The browser harness simulates Chrome messaging over real IndexedDB; the extension smoke suite loads the actual unpacked extension. [Architecture and data rebuild](docs/ARCHITECTURE.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md).
-
-Application code: [MIT](LICENSE). Dictionary data keeps its own [attribution and licenses](THIRD_PARTY_NOTICES.md).
+Checks use synthetic records and isolated browser storage. The browser harness simulates extension messaging over real IndexedDB; the extension suite separately loads the actual unpacked extension. [Development details](docs/ARCHITECTURE.md).
