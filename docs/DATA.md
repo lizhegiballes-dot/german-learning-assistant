@@ -10,7 +10,7 @@
 
 Missing Chinese definitions are shown as missing, or with an explicitly labeled English fallback. **No machine-generated Chinese meaning is silently invented.** This release does not promise a complete German dictionary, complete inflection analysis or exhaustive senses. The online parser simplifies wiki markup; the original entry and contributor history remain linked for checking.
 
-Duden / Langenscheidt definitions, recordings, private course materials and personal study histories are **not bundled**. WortGlide is independent and is not endorsed by any dictionary publisher. See [attributions and transformations](../THIRD_PARTY_NOTICES.md).
+Duden / Langenscheidt definitions, recordings, private course materials and personal study histories are **not bundled**. German Learning Assistant is independent and is not endorsed by any dictionary publisher. See [attributions and transformations](../THIRD_PARTY_NOTICES.md).
 
 ## Your data
 

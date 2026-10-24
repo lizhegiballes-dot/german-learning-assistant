@@ -1,6 +1,6 @@
 # Architecture
 
-WortGlide is a standalone Manifest V3 extension. There is no desktop service or application backend.
+German Learning Assistant is a standalone Manifest V3 extension. There is no desktop service or application backend.
 
 - content.js observes user selections outside editing fields, creates a closed-shadow popup and sends internal extension messages. It does not scrape an entire page. Generation / request checks keep late responses from reopening a closed card or replacing another word.
 - background.js owns lookup request IDs, provider jobs, message validation, user preferences, local-only TTS and context menus.
