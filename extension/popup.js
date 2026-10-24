@@ -1,0 +1,3 @@
+'use strict';
+chrome.storage.local.get({uiLang:'en'}).then(p=>{document.documentElement.lang=p.uiLang==='zh'?'zh-CN':'en';document.querySelectorAll('[data-i18n]').forEach(e=>e.textContent=wortT(p.uiLang,e.dataset.i18n));document.querySelectorAll('[data-placeholder]').forEach(e=>e.placeholder=wortT(p.uiLang,e.dataset.placeholder));});
+document.querySelector('#open-app').onclick=()=>chrome.tabs.create({url:chrome.runtime.getURL('app.html')});document.querySelector('#quick-query').onsubmit=e=>{e.preventDefault();const q=document.querySelector('#q').value.trim();if(q)chrome.tabs.create({url:chrome.runtime.getURL('app.html')+'?q='+encodeURIComponent(q)});};

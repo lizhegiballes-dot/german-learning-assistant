@@ -1,0 +1,6 @@
+'use strict';
+(() => {
+ const listeners=[],changes=[];const read=()=>JSON.parse(localStorage.getItem('wortglide-test-settings')||'{}');
+ globalThis.importScripts=()=>{};
+ globalThis.chrome={runtime:{id:'wortglide-test',lastError:null,getManifest:()=>({version:'0.1.0'}),getURL:p=>location.origin+'/'+p,onInstalled:{addListener:()=>{}},onMessage:{addListener:fn=>listeners.push(fn)},sendMessage:m=>new Promise((resolve,reject)=>{let handled=false;for(const fn of listeners){if(fn(m,{id:'wortglide-test',url:location.href},resolve))handled=true;}if(!handled)reject(Error('No handler'));})},storage:{local:{get:async defaults=>({...defaults,...read()}),set:async values=>{const old=read(),next={...old,...values};localStorage.setItem('wortglide-test-settings',JSON.stringify(next));const diff=Object.fromEntries(Object.keys(values).map(k=>[k,{oldValue:old[k],newValue:values[k]}]));for(const fn of changes)fn(diff,'local');}},onChanged:{addListener:fn=>changes.push(fn)}},contextMenus:{removeAll:fn=>fn(),create:()=>{},onClicked:{addListener:()=>{}}},tabs:{create:async()=>{},sendMessage:async()=>{}},tts:{stop:()=>{},getVoices:async()=>[],speak:()=>{}}};
+})();
